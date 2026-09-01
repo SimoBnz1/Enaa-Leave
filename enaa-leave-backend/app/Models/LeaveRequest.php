@@ -15,7 +15,6 @@ class LeaveRequest extends Model
         'replacement_plan',
     ];
     
-
     protected $casts = [
         'start_date' => 'date',
         'end_date' => 'date',
