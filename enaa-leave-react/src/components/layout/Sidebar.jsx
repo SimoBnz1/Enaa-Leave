@@ -53,6 +53,8 @@ function Sidebar() {
             icon: FilePlus2,
         },
 
+
+        
         {
             name: "Calendrier",
             path: "/employee/calendar",
