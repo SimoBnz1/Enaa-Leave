@@ -52,7 +52,7 @@ function EmployeeDashboard() {
             {/* Header */}
             <div className="mb-8">
                 <h1 className="text-2xl font-bold text-slate-900">
-                    Bonjour {data.user.name} 👋
+                    Bonjour {data.user.name} 
                 </h1>
 
                 <p className="text-slate-500 mt-1">
