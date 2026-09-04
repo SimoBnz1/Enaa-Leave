@@ -10,17 +10,27 @@ return new class extends Migration
     {
         Schema::create('leave_requests', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+
+            $table->foreignId('user_id')
+                ->constrained()
+                ->onDelete('cascade');
+
+            $table->string('leave_type');
+
             $table->date('start_date');
+
             $table->date('end_date');
+
+            $table->string('duration_type')->default('full_day');
+
             $table->text('reason');
-            
-            // Workflow de validation : pending_manager, pending_hr, approved, rejected
+
+            $table->string('attachment')->nullable();
+
+            $table->text('replacement_plan')->nullable();
+
             $table->string('status')->default('pending_manager');
-            
-            // Pour les enseignants : plan de remplacement / rattrapage
-            $table->text('replacement_plan')->nullable(); 
-            
+
             $table->timestamps();
         });
     }

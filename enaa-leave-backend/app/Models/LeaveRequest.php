@@ -8,18 +8,16 @@ class LeaveRequest extends Model
 {
     protected $fillable = [
         'user_id',
+        'leave_type',
         'start_date',
         'end_date',
+        'duration_type',
         'reason',
-        'status',
+        'attachment',
         'replacement_plan',
-    ];
-    protected $casts = [
-        'start_date' => 'date',
-        'end_date' => 'date',
+        'status',
     ];
 
-    // Relation : Une demande appartient à un utilisateur
     public function user()
     {
         return $this->belongsTo(User::class);

@@ -6,7 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class LeaveBalance extends Model
 {
-    protected $fillable = ['user_id', 'year', 'total_days', 'used_days'];
+    protected $fillable = [
+        'user_id',
+        'year',
+        'total_days',
+        'used_days',
+    ];
 
     public function user()
     {
